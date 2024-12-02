@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import NavBar from '../compnents/Navbar'
-import SideBar from '../compnents/Sidebar'
+import NavBar from '../compnents/NavBar'
+import SideBar from '../compnents/SideBar'
 import Login from '../compnents/forms/Login'
 import Register from '../compnents/forms/Register'
 import AddFirm from '../compnents/forms/AddFirm'
