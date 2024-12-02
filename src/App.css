@@ -1,0 +1,183 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
+}
+
+/* Navbar Section */
+.navSection {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4E54C8;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navSection .userAuth, 
+.navSection .logout {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navSection .userAuth:hover, 
+.navSection .logout:hover {
+    color: #FFD700;
+}
+
+/* Sidebar Section */
+.sideBarSection {
+    width: 15%;
+    height: 95vh;
+    background-color: #3D348B;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sideBarSection ul {
+    padding: 0;
+}
+
+.sideBarSection ul li {
+    list-style: none;
+    margin: 20px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.sideBarSection ul li:hover {
+    transform: translateX(10px);
+    color: #FFD700;
+}
+
+/* Form Sections */
+.authForm, 
+.tableForm {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.authForm input, 
+.tableForm input {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.authForm input:focus, 
+.tableForm input:focus {
+    border-color: #4E54C8;
+    outline: none;
+}
+
+.authForm label, 
+.tableForm label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Buttons */
+.btnSubmit button {
+    background-color: #4E54C8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnSubmit button:hover {
+    background-color: #2C2F66;
+}
+
+/* Table Styling */
+.product-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-table th, 
+.product-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #4E54C8;
+    color: #fff;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Error Section */
+.errorSection {
+    text-align: center;
+    padding: 50px 20px;
+    color: #FF4D4D;
+}
+
+.errorSection h1 {
+    font-size: 5rem;
+}
+
+.errorSection h3 {
+    font-size: 1.5rem;
+    color: #FF6F61;
+}
+
+/* Welcome Section */
+.welcomeSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f5ff;
+}
+
+.welcomeSection h2 {
+    font-size: 3rem;
+    color: #4E54C8;
+}
+
+.landingImage img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styling */
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
