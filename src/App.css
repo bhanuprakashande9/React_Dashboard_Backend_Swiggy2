@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    padding-top: 80px;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
     background-color: #f7f8fc;
@@ -12,6 +13,11 @@ body {
 
 /* Navbar Section */
 .navSection {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -37,6 +43,7 @@ body {
 .sideBarSection {
     width: 15%;
     height: 95vh;
+    margin-top: 80px;
     background-color: #3D348B;
     color: #fff;
     padding: 10px;
@@ -114,10 +121,11 @@ body {
 
 /* Table Styling */
 .product-table {
-    width: 80%;
-    margin: 20px auto;
+    width: 70%;
+    margin-left: 15%; /* Same as the sidebar width */
     border-collapse: collapse;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
 }
 
 .product-table th, 
