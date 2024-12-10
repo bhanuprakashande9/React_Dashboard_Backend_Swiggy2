@@ -1,286 +1,191 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:wght@200..800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Comme:wght@100..900&family=Hind+Guntur:wght@300;400;500;600;700&display=swap');
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Roboto Condensed", sans-serif; */
-    font-family: "Comme", sans-serif;
+    font-family: "Nunito", sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
 }
 
+/* Navbar Section */
 .navSection {
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;          /* Align it to the top of the viewport */
+    left: 0;         /* Align it to the left of the viewport */
+    width: 97.5%;     /* Ensure it spans the requried width of the screen */
+ 
     height: 80px;
     display: flex;
     justify-content: space-between;
-    /* background-color: rgb(54, 52, 180); */
-    background-color: #F46036;
+    background-color: #4E54C8;
     align-items: center;
-    color: white;
+    color: #fff;
     padding: 0 20px;
-    font-size: large;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-.userAuth {
+.navSection .userAuth, 
+.navSection .logout {
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.logout {
-    cursor: pointer;
+.navSection .userAuth:hover, 
+.navSection .logout:hover {
+    color: #FFD700;
 }
 
+/* Sidebar Section */
 .sideBarSection {
-    width: 100%;
-    max-width: 15%;
+    width: 15%;
     height: 95vh;
-    padding-top: 10px;
-    /* background-color: lightgray; */
-    background-color: #2E294E;
-    color: white;
+    background-color: #3D348B;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sideBarSection ul {
+    padding: 0;
 }
 
 .sideBarSection ul li {
     list-style: none;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: medium;
-    cursor: pointer;
-}
-
-.collectionSection {
-    display: flex;
-}
-
-
-/* logisetion */
-
-.loginSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.registerSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.authForm label {
-    width: 100%;
-    max-width: 55%;
-    font-weight: 400;
-}
-
-.authForm {
-    width: 100%;
-    max-width: 50%;
-    margin-top: -230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: 1px solid gray;
-    border-radius: 10px;
-    position: relative;
-}
-
-.authForm input {
-    width: 100%;
-    max-width: 55%;
-    height: 1.4rem;
-    height: 2rem;
-    font-size: medium;
-}
-
-
-/* firmSection AddFirm */
-
-.firmSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.tableForm {
-    width: 100%;
-    max-width: 50%;
-    margin-top: -100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: 1px solid gray;
-    -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
-}
-
-.tableForm input {
-    width: 100%;
-    max-width: 55%;
-    height: 35px;
-    max-width: 85%;
-    margin-bottom: 10px;
-}
-
-.tableForm label {
-    width: 100%;
-    max-width: 85%;
+    margin: 20px 0;
     font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
 }
 
-
-/* check box inputs */
-
-.checkInp {
-    width: 100%;
-    max-width: 85%;
-    display: flex;
+.sideBarSection ul li:hover {
+    transform: translateX(10px);
+    color: #FFD700;
 }
 
-.checkInp label {
-    width: 20%;
+/* Form Sections */
+.authForm, 
+.tableForm {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: auto;
 }
 
-.inputsContainer {
-    width: 100%;
-    display: flex;
+.authForm input, 
+.tableForm input {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-.checboxContainer {
-    width: 100%;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.authForm input:focus, 
+.tableForm input:focus {
+    border-color: #4E54C8;
+    outline: none;
 }
 
-.checboxContainer label {
-    width: 100%;
+.authForm label, 
+.tableForm label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
 }
 
-.checboxContainer input {
-    margin-left: -180px;
+/* Buttons */
+.btnSubmit button {
+    background-color: #4E54C8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.checboxContainer label {
-    font-size: small;
+.btnSubmit button:hover {
+    background-color: #2C2F66;
 }
 
-.regBoxContainer label {
-    font-size: small;
-}
-
-
-/* products table */
-
-.productSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Table Styling */
 .product-table {
-    width: 80vw;
+    width: 80%;
+   
+    margin: 6.5% auto;
+    margin-left: 18%;
     border-collapse: collapse;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.product-table th,
+.product-table th, 
 .product-table td {
-    border: 1px solid rgb(128, 128, 128);
-    padding: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
 }
 
 .product-table th {
-    text-align: left;
-    background-color: rgb(47, 77, 212);
-    color: white;
+    background-color: #4E54C8;
+    color: #fff;
 }
 
-.deleteBtn {
-    color: red;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-
-/* not found */
-
+/* Error Section */
 .errorSection {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: #FF4D4D;
 }
 
 .errorSection h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
-h3 {
-    color: #D7263D;
+.errorSection h3 {
+    font-size: 1.5rem;
+    color: #FF6F61;
 }
 
-
-/* btn Submit */
-
-.btnSubmit button {
-    background-color: rgb(43, 43, 180);
-    width: 6rem;
-    color: white;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-
-/* landing image  */
-
+/* Welcome Section */
 .welcomeSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.landingImage {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -100px;
-}
-
-.welcomeSection h2 {
-    font-size: 3rem;
     text-align: center;
-    position: relative;
-    top: -80px;
-    color: #2073c0;
+    padding: 50px 20px;
+    background-color: #f0f5ff;
 }
 
-.showPassword {
-    width: fit-content;
-    position: absolute;
-    bottom: 90px;
-    right: 135px;
-    cursor: pointer;
+.welcomeSection h2 {  
+    font-size: 3rem;
+    color: #4E54C8;
 }
 
-.loaderSection {
-    z-index: 10000;
+.landingImage img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styling */
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
 }
