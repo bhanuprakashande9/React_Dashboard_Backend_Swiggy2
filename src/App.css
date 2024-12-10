@@ -44,13 +44,20 @@ body {
 
 /* Sidebar Section */
 .sideBarSection {
+
+    position: fixed;  /* Fix the sidebar to the left side */
+    top: 80px;        /* Start the sidebar just below the navbar (assuming navbar height is 80px) */
+    left: 0;          /* Align it to the left of the viewport */
+   
+
     width: 15%;
     height: 95vh;
     background-color: #3D348B;
     color: #fff;
-    padding: 40px;
-    position: fixed;
+  padding: 10px;
+   
     box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
 }
 
 .sideBarSection ul {
