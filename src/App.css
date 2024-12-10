@@ -15,7 +15,9 @@ body {
     position: fixed; /* Fix the navbar to the top */
     top: 0;          /* Align it to the top of the viewport */
     left: 0;         /* Align it to the left of the viewport */
+
     width: 97.5%;     /* Ensure it spans the requried width of the screen */
+
  
     height: 80px;
     display: flex;
@@ -26,6 +28,7 @@ body {
     padding: 0 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+  
 }
 
 .navSection .userAuth, 
@@ -45,7 +48,7 @@ body {
     height: 95vh;
     background-color: #3D348B;
     color: #fff;
-    padding: 10px;
+    padding: 40px;
     position: fixed;
     box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
 }
@@ -76,7 +79,7 @@ body {
     padding: 20px;
     width: 50%;
     max-width: 600px;
-    margin: auto;
+    margin: 100px auto;
 }
 
 .authForm input, 
@@ -88,6 +91,7 @@ body {
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s;
+    
 }
 
 .authForm input:focus, 
